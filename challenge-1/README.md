@@ -77,7 +77,7 @@ Find out the following about the dataset:
 
 **Tip** Hover over the columns to find out more about the values in the column.
 
-### Bonus: Can the date column be fixed in the datasource?
+### Bonus objective: Can the date column be fixed in the datasource?
 There is a date column in the dataset that doesn't look right. It is marked as
 a string, but as you may have noticed it is a date/time encoded in a specific way.
 
