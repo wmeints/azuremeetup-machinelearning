@@ -48,7 +48,7 @@ number of tabs to the left side of the screen.
 
 ### Objective: Load the data as a new data source
 Navigate to the data tab and add a new data source to your project.
-We'll be using the CSV file in the folder `data/kc_house_data.csv` that you
+We'll be using the CSV file in the folder [data/kc_house_data.csv](data/kc_house_data.csv) that you
 will find in the same folder as this instruction file.
 
 As a data scientist you need to make sure that the file can be properly read.
@@ -106,7 +106,7 @@ Try remove the column from the dataset in the data preparation package.
 
 **Hint** Right click the columns in the data preparation window!
 
-## Bonus objective: Fix the date column
+### Bonus objective: Fix the date column
 Remember we tried to parse the date column in the data source. As you may have
 noticed, that didn't work.
 
