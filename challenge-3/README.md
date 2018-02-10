@@ -210,8 +210,15 @@ model does an accurate prediction (Remember, we want a score as close to
 
 ### Objective: Improve your model
 It seems as if we didn't fully explain the price of a house by its features.
-Try to include other features such as `bedrooms` and `bathrooms` and see if the score
-improves.
+Try to include other features such as `bedrooms` and `bathrooms` and see if 
+the score improves. 
+
+If you want you can go to your data analytics notebook and explore the data some
+more to find out what other features could be useful.
+
+**Hint** I personally feel that the size of the lot and features about 
+the location such as the fact that we have a waterfront and a good view
+are quite important. Maybe those provide the explanation of a higher price?
 
 ## Next steps
 Now that we have made a model and optimized it a bit, we need to look at how
