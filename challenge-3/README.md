@@ -20,7 +20,7 @@ columns in the table.
 As an example, check the plot below. It shows the 
 square footage above ground compared to the price those homes were sold for.
 The observations are shown as dots. The line in the plot is the regression line
-for that best fits the observations.
+that best fits the observations.
 
 ![Regression plot](images/plot-regline.png)
 
