@@ -52,10 +52,40 @@ minutes for the resources to be created.
  After you downloaded the tool, start the installation and follow the 
  instructions to install the Azure Machine Learning Workbench on your machine.
 
- ## Step 5: Open the tool and create a new project
  Once installed, open the Azure Machine Learning Workbench. Login with your
  microsoft account and select the experiment that you've just created.
 
  ![Launch screen](images/ml-workbench-start.png)
 
- Now you're ready to get started with [Challenge 1](challenge-1/README.md).
+## Step 5: Create a new project in Azure Machine Learning Workbench
+Before you can load data, you need to setup a new project in the Azure Machine
+Learning Workbench environment.
+
+![The machine learning workspace](images/ml-workbench-workspace.png)
+
+With the workbench opened in your Experiment environment, Click the large plus
+sign in the list of workspaces. 
+
+Create an empty project with the following properties:
+
+* Name: PredictHousingPrices
+* Project path: A folder on your harddrive
+* Template: Empty project
+
+Leave the other settings as they are and click create.
+
+**Note** You can attach a Visual Studio online project to your experiment.  
+For more information [check the documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/using-git-ml-project)
+
+## Step 7: Install Visual Studio Code and configure it as your IDE
+Click the `File > Configure Project IDE` to configure the IDE for your project.
+Enter the following properties:
+
+ * IDE Name: Visual Studio Code
+ * Path for the IDE: C:\Program Files\microsoft VS Code\Code.exe
+
+Save the changes and close the panel.
+
+## Ready? Start your first challenge
+You now have a fully configured machine learning environment.
+Now you're ready to get started with [Challenge 1](challenge-1/README.md).
