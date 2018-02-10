@@ -78,9 +78,9 @@ and its influence on the price of a home.
 
 Add a new python block to the notebook and paste in the following code:
 
-**Tip** Use the shortcut key `B` to add another block to your notebook. You can
-convert the new block to python using the shortcut key `Y`. 
-The shortcut key `Escape` takes you out of edit mode in any cell.
+**Tip** Use the shortcut key <kbd>B</kbd> to add another block to your notebook. You can
+convert the new block to python using the shortcut key <kbd>Y</kbd>. 
+The shortcut key <kbd>Esc</kbd> takes you out of edit mode in any cell.
 
 ```
 import matplotlib.pyplot as plt
