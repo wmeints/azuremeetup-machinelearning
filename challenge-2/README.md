@@ -78,8 +78,8 @@ and its influence on the price of a home.
 
 Add a new python block to the notebook and paste in the following code:
 
-**Tip** Use the shortcut key <kbd>B</kbd> to add another block to your notebook. You can
-convert the new block to python using the shortcut key <kbd>Y</kbd>. 
+**Tip** Use the shortcut key <kbd>B</kbd> to add another block to your notebook. 
+You can convert the new block to python using the shortcut key <kbd>Y</kbd>. 
 The shortcut key <kbd>Esc</kbd> takes you out of edit mode in any cell.
 
 ```
@@ -201,8 +201,8 @@ for the following candidate features:
 
  Try setting the `bins=` parameter to another value.
 
-  * What does setting the number of bins to a lower value do?
-  * What does setting the number of bins to a higher value do?
+  * What does setting the number of bins to a lower value do in terms of accuracy?
+  * What does setting the number of bins to a higher value do in terms of accuracy?
 
 Usually you don't want to leave the outliers in your dataset. You can remove
 them from the dataset in the data preparation package. However, which outliers
@@ -229,8 +229,8 @@ Do the same for the other candidate features.
 
 ### Bonus objective: An alternative technique to discover outliers
 There's another useful technique that you can use for exploring the distribution
-of values within a feature. The Emperical distribution function (ECDF) is a means
-of plotting the distribution of values of a feature.
+of values within a feature. The Emperical cumulative distribution function 
+(ECDF) is a means of plotting the distribution of values of a feature.
 
 ![Sample ECDF plot](images/plot-ecdf.png)
 
