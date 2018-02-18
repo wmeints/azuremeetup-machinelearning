@@ -14,7 +14,7 @@ After you're done with the setup, you can start with the first challenge.
 1. [Load and prepare the data using data preparation in Azure Machine Learning Workbench](challenge-1/README.md)
 2. [Explore the data using python notebooks](challenge-2/README.md)
 3. [Build a model with Python and scikit-learn](challenge-3/README.md)
-4. [Deploy the model to Azure using Azure Machine Learning operationalization clusters](challenge-4/README.md)
+4. [Deploy your model to Azure](challenge-4/README.md)
 
 ## Copyright and other notifications
 The data for this workshop comes from [harlfoxem]() who hosted all 
