@@ -86,6 +86,26 @@ Enter the following properties:
 
 Save the changes and close the panel.
 
+## Step 8: Create a production environment
+If you're planning on deploying your model to Azure in [Challenge 4](challenge-4/README.md) then you
+need to setup an Azure ML environment. Go to `File -> Open command prompt` and 
+execute the following command in your command prompt:
+
+```
+az ml env setup -l eastus2 -n testexperimentenv
+```
+
+This creates a new VM with docker for Azure ML experiments in the region eastus2.
+
+**Note** I used eastus2 because this service is in preview and currently doesn't
+work in westeurope or other regions. 
+
+Bind the environment to your experiment using the following command:
+
+```
+az ml env set -g testexperimentenvrg -n testexperimentenv
+```
+
 ## Ready? Start your first challenge
 You now have a fully configured machine learning environment.
 Now you're ready to get started with [Challenge 1](challenge-1/README.md).
