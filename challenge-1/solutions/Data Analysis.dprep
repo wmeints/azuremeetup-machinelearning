@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 39,
+  "id": "89246cc0-b419-40be-853d-ce63375dd537",
+  "activities": [
+    {
+      "id": "ebc90905-0d4b-479a-9294-35675630271d",
+      "name": "kc_house_data",
+      "blocks": [
+        {
+          "id": "3c1baaff-7e91-4ab3-a919-62a5debbe985",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./kc_house_data.dsource",
+              "referencedActivityId": "ab7a128d-50e1-487e-997a-d69a46953e82",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "436aba88-80ef-4e6c-900a-4ccd6fa71b24",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "id"
+            ]
+          }
+        },
+        {
+          "id": "bd819405-5216-491c-94a7-27a9f51dbcab",
+          "type": "Microsoft.DPrep.ConvertColumnFieldTypeToDateBlock",
+          "arguments": {
+            "columnIds": [
+              "date"
+            ],
+            "dateFormat": "%Y%m%dT%H%M%S"
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "2e489de4-3351-4fc8-b86e-008181759f49",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "ebc90905-0d4b-479a-9294-35675630271d",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}

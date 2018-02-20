@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 39,
+  "id": "04b8495f-975a-47f6-9a78-31194e10b6a3",
+  "activities": [
+    {
+      "id": "ab7a128d-50e1-487e-997a-d69a46953e82",
+      "name": "kc_house_data",
+      "blocks": [
+        {
+          "id": "d9275d0c-72f2-441e-be4b-1d0d8250f0e1",
+          "type": "Microsoft.DPrep.DataSourceBlock",
+          "arguments": {
+            "path": {
+              "target": 0,
+              "resourceDetails": [
+                {
+                  "path": ".\\kc_house_data.csv"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "03dddebf-94b1-4c9e-83c9-95415fa7ce52",
+          "type": "Microsoft.DPrep.ParseDelimitedBlock",
+          "arguments": {
+            "preview": false,
+            "columnHeadersMode": 1,
+            "separator": ",",
+            "fileEncoding": 0,
+            "skipRowsMode": 0,
+            "handleQuotedLineBreaks": false
+          }
+        },
+        {
+          "id": "b53fb82b-9794-406f-8407-f4b2dc3a88a0",
+          "type": "Microsoft.DPrep.SetColumnTypesBlock",
+          "arguments": {
+            "columnConversion": [
+              {
+                "columnId": "id",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "view",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "zipcode",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "bathrooms",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "floors",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "yr_built",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "bedrooms",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "waterfront",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_basement",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_lot15",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_living",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "grade",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "long",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_lot",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "yr_renovated",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "price",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "condition",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "lat",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_above",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sqft_living15",
+                "typeProperty": 3,
+                "typeArguments": {}
+              }
+            ]
+          }
+        },
+        {
+          "id": "1b3e62c2-dfaf-4cb3-a1be-ed5d2c63cf30",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "14f2f28a-3ff3-4952-9a2f-fa1526a25b43",
+                "sampleRevision": "51cea603-f217-46ad-9f74-5b813f94b291",
+                "sampleName": "Full File",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 3,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "14f2f28a-3ff3-4952-9a2f-fa1526a25b43"
+          }
+        },
+        {
+          "id": "815a7789-ca29-4b0e-a932-c498ec5a9c1d",
+          "type": "Microsoft.DPrep.HandlePathColumnBlock",
+          "arguments": {
+            "pathColumnOperation": 0
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "6f23ccc9-9a35-4cc4-845f-540e9944f8f0",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "ab7a128d-50e1-487e-997a-d69a46953e82",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}
