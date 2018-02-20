@@ -3,7 +3,7 @@ For the sake of the challenges in this lab, we're going to pretent you're a
 data scientist for a local real estate agency. 
 
 It is your job to come up with a model that will predict the price that a house 
-will sell for in the King County in Washington USA. The agency wants to use
+will sell for in King County, Washington USA. The agency wants to use
 this model in their internal system to come up with the perfect price for each
 home they put on the market. 
 
@@ -14,7 +14,7 @@ model from that to predict the price for a house.
 The purpose of this challenge is to load the initial dataset and clean it up
 so we can use it for building a machine learning model.
 
-## Step 2: Load the data
+## Step 1: Load the data
 Once you've created a new project you will be taken to a screen that displays a 
 number of tabs to the left side of the screen.
 
@@ -26,9 +26,13 @@ number of tabs to the left side of the screen.
 * Runs - This tab provides access to information about machine learning jobs
 * Files - This tab provides access to files in your project
 
+Familiarize yourself with your surrounds. When you're ready, we can move on
+to loading the data into the workbench.
+
 ### Objective: Load the data as a new data source
 Navigate to the data tab and add a new data source to your project.
-We'll be using the CSV file in the folder [data/kc_house_data.csv](data/kc_house_data.csv) that you
+We'll be using the CSV file in the folder 
+[data/kc_house_data.csv](data/kc_house_data.csv) that you
 will find in the same folder as this instruction file.
 
 As a data scientist you need to make sure that the file can be properly read.
@@ -48,7 +52,7 @@ that a data scientist (which you pretend to be today) is interested in.
 
 ![Data source window](images/ml-workbench-datasource.png)
 
-### Objective: Access dataset quality
+### Objective: Assess dataset quality
 Find out the following about the dataset:
 
 * Are there any missing values in the dataset?
@@ -59,7 +63,8 @@ Find out the following about the dataset:
 
 ### Bonus objective: Can the date column be fixed in the datasource?
 There is a date column in the dataset that doesn't look right. It is marked as
-a string, but as you may have noticed it is a date/time encoded in a specific way.
+a string, but as you may have noticed it is a date/time encoded in a specific 
+way.
 
 Check the field conversion for the data source and try to find out whether you
 can fix the date column so that it becomes a proper date/time.
