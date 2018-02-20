@@ -3,6 +3,9 @@ This repository contains the challenges and data for the hands-on lab held at
 the dutch azure meetup. The goal of the workshop is to build a model to predict 
 house prices and deploy the model to Azure.
 
+This lab includes [slides](Bring your AI experiment to production.pptx) 
+with an introduction.
+
 ## Prerequisites
 To complete the challenges in this repository you need to have the following:
 
