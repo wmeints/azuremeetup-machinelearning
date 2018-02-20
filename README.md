@@ -3,6 +3,12 @@ This repository contains the challenges and data for the hands-on lab held at
 the dutch azure meetup. The goal of the workshop is to build a model to predict 
 house prices and deploy the model to Azure.
 
+## Prerequisites
+To complete the challenges in this repository you need to have the following:
+
+ * A Windows or Mac computer
+ * An active Azure subscription
+
 ## Quickstart
 Before you start working on the challenge you need to install some software on 
 your computer. Please follow the instructions on 
