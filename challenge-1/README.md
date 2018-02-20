@@ -45,7 +45,7 @@ that you would reasonably expect?
 Follow the steps in the dialog to finish creating the new data source.
 Make sure you use the `Full File` sampling strategy in step 5 of the dialog.
 
-## Step 3: Explore the dataset further
+## Step 2: Explore the dataset further
 Now that you have the data source linked, let's explore it. 
 In Azure Machine Learning Workbench there are a number of interesting metrics
 that a data scientist (which you pretend to be today) is interested in.
@@ -69,7 +69,7 @@ way.
 Check the field conversion for the data source and try to find out whether you
 can fix the date column so that it becomes a proper date/time.
 
-## Step 4: Clean up the dataset
+## Step 3: Clean up the dataset
 Now that we have a data source, it is time to prepare a version of the data
 for data analysis. 
 
