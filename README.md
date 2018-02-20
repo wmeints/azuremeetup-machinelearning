@@ -8,10 +8,11 @@ Before you start working on the challenge you need to install some software on
 your computer. Please follow the instructions on 
 [how to setup your environment](environment-setup.md).
 
-After you're done with the setup, you can start with the first challenge.
+After you're done with the setup, start with 
+[the first challenge](challenge-1/README.md).
 
 ## Challenges
-1. [Load and prepare the data using data preparation in Azure Machine Learning Workbench](challenge-1/README.md)
+1. [Load and prepare the data](challenge-1/README.md)
 2. [Explore the data using python notebooks](challenge-2/README.md)
 3. [Build a model with Python and scikit-learn](challenge-3/README.md)
 4. [Deploy your model to Azure](challenge-4/README.md)
