@@ -1,5 +1,5 @@
 # Challenge 2: Explore the data
-In the [previous challenge](../challenge-1/README.md) we loaded a housing
+In the [previous challenge](../challenge-1/README.md) we loaded the housing
 prices dataset into the machine learning workbench. We also looked at the 
 data quality and cleaned up a few things in the dataset.
 
@@ -7,7 +7,8 @@ You should now have an idea of the data you have available for your house
 price prediction model. Let's move on to exploratory data analysis.
 
 Exploratory data analysis is the process of using statistics, plots and
-other techniques to get a sense of the data.
+other techniques to check a few things in the data and discover the story
+behind the data.
 
 Although exploratory data analysis doesn't give you the whole story, it is 
 a necessary step towards building any type of model based on data. Luckely, 
@@ -34,14 +35,14 @@ about the kernel that the server uses.
 When this happens, select the `PredictHousingPrices local` kernel. 
 
 ## Step 2: Load the data inside the notebook
-Once started you can get to work in the python notebook. 
+Once the server is started you can get to work in the python notebook. 
 A python notebook is a webpage in which you can mix blocks of python code with
 blocks of markdown. This is a useful method to explore the dataset. 
 
 In a python notebook you can execute code to create dataplots and then
-add markdown to document them. This will help you explain how you and why
+add markdown to document them. This will help you explain why 
 you made certain choices. It is also useful for your teammates, they will
-now exactly how to analyse the data themselves.
+now exactly know how to analyse the data themselves.
 
 Initially your notebook will contain three blocks of code:
 
@@ -49,7 +50,8 @@ Initially your notebook will contain three blocks of code:
  * A block that enables history recording within the workbench
  * A block that loads the dataset using the data preparation package
 
-Execute all  blocks by selecting them and pressing Ctrl+Enter.
+Execute all  blocks by selecting them one-by-one and pressing 
+<kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
 
 **Tip** Click the button with the keyboard icon for an overview of all the 
 shortcuts in the notebook. Review them, you will be spending quite a bit of
@@ -115,16 +117,16 @@ could of course write down a large block instead. This might seem easier,
 but as you keep working this will present you with a number of problems.
 
 You can only execute one block at a time. A large block with slow code will 
-slow you down in your thought process. Small mistakes require you to reload
+slow you down. Small mistakes require you to reload
 large chunks of data that take a lot of time. Also, this will eat up all the
 memory in your system.
 
-So, write small blocks, it will help you move faster in the long run!
+So, write small blocks, it will help you move faster.
 
 ### Objective: Is there a correlation?
 As any good data scientists knows, when you want to
 use a certain feature in a model, it is important to check for a number of 
-things
+things.
 
 In the chart, is there any correlation between `sqft_above` and `price`? 
 Essentially, can you draw a line using a rule through the data that represents
@@ -152,8 +154,18 @@ about features like the number of bathrooms and their usefulness for predicting
 the price of a home?
 
 ### Bonus objective: The year a home was renovated
-There's a feature in the dataset `yr_renovated`, it doesn't have a whole lot
-of observations with values above zero. Try to plot a scatter plot.
+There's a feature in the dataset `yr_renovated`, my intuition says it could say
+something about the price. 
+
+First examine the feature by calling the `value_counts()` method on the series.
+You can do this with the following code:
+
+``` python
+dataframe['col_name'].value_counts()
+```
+
+Also try to make a scatter plot for the feature in combination with the price
+feature.
 
 Is this a useful feature?
 
@@ -178,18 +190,18 @@ Add a new python block to your notebook and paste the following code
 in the new block:
 
 ```
-df['sqft_above'].plot.hist(bins=50, normed=True)
+df['sqft_living'].plot.hist(bins=50, normed=True)
 plt.xlabel('Square foot above ground')
 plt.show()
 ```
 
 ### Objective: Check the histogram for outliers
 The plot we just made shows you a histogram of all values for the 
-feature `sqft_above`. Note how it has a nice curve towards the left of the plot.
+feature `sqft_living`. Note how it has a nice curve towards the left of the plot.
 
 Are there any obvious outliers in this plot?
 
-**Hint** Check around the value of 6000 square foot above ground.
+**Hint** Check around the value of 8000 square foot.
 
 ### Objective: Check other features for outliers
 Time to check more candidate features for outliers. Plot histograms
@@ -261,12 +273,44 @@ plt.show()
 The ECDF plot can be useful to see how the values are distributed. Try to
 plot a few and see if you find this kind of plot useful.
 
+## Bonus objective: Yet another method of finding correlations
+While the ECDF plots and scatter plots provide you with an intuitive way of 
+learning about the correlation there's an even more detailed method to find
+correlations in the data.
+
+Try this:
+
+``` python
+import seaborn as sns
+
+# Calculate the pearson correlation coefficient
+corr = df.corr(method='pearson')
+
+# Make the plot larger so we can properly read its contents.
+plt.rcParams["figure.figsize"] = (20,20)
+
+# Create a heatmap for a better impression of the data
+_ = sns.heatmap(corr, annot=True)
+plt.show()
+```
+
+This plots a matrix that shows the pearson correlation coefficient. 
+The pearson correlation coefficient tells you how well the data fits a linear
+function of the first order (in short, no bends in the line). 
+
+The pearson correlation coefficient goes from -1.0 to 1.0 where 1.0 and -1.0 
+represents a perfectly linear relationship. A value close to zero means that
+there's hardly any relationship between two features.
+
+Check your features again, does this chart change anything 
+to your feature selection?
+
 ## Conclusion
 After exploring the dataset using graphical plots we now have a good sense of
 what features might be useful for our model. 
 
-It turns out that `sqft_above`, `sqft_basement` and `grade` seem like pretty
-reasonable candidates. `condition` is also a feature that could help with
+It turns out that `sqft_living`, `sqft_basement` and `grade` seem like pretty
+reasonable candidates. `bathrooms` is also a feature that could help with
 predicting the price of a house.
 
 The number of bathrooms and bedrooms don't seem to be all that descriptive, 
