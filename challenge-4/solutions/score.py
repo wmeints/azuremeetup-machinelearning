@@ -1,4 +1,5 @@
 import pickle
+import json
 
 from azureml.api.schema.dataTypes import DataTypes
 from azureml.api.schema.sampleDefinition import SampleDefinition
@@ -30,7 +31,6 @@ def run(data):
     :param data: The input data for the model
     :return: Returns the JSON output for the service
     """
-    import json
 
     result = model.predict(data)
 
@@ -43,7 +43,6 @@ def generate_api_schema():
 
     print("create schema")
 
-    # NOTICE: Modify this sample input so that it matches the features used in your model.
     sample_input = {
         'sqft_above': 100.0,
         'sqft_basement': 120.0,
@@ -74,9 +73,8 @@ if __name__ == '__main__':
     logger = get_azureml_logger()
 
     import argparse
-    import json
     import pandas as pd
-
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('--generate', action='store_true', help='Generate Schema')
     args = parser.parse_args()

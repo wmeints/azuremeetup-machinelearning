@@ -1,4 +1,5 @@
 import pickle
+import json
 
 from azureml.api.schema.dataTypes import DataTypes
 from azureml.api.schema.sampleDefinition import SampleDefinition
@@ -28,7 +29,6 @@ def run(data):
     :param data: The input data for the model
     :return: Returns the JSON output for the service
     """
-    import json
 
     # TODO: Make a prediction and return the result
 
@@ -39,16 +39,11 @@ def generate_api_schema():
 
     print("create schema")
 
-    # TODO: Modify this sample input so that it matches the features used in your model.
+    # TODO: Modify this sample input so that it matches the features used in your model. 
+    # Use any sample value you like. Just make sure that the type matches the expected attribute.
     sample_input = {
         'sqft_above': 100.0,
-        'sqft_basement': 120.0,
-        'grade': 3,
-        'condition': 1,
-        'bedrooms': 3,
-        'waterfront': 1,
-        'floors': 2,
-        'sqft_lot': 10000
+        'sqft_basement': 120.0
     }
 
     sample_df = pd.DataFrame([sample_input])
@@ -83,15 +78,10 @@ if __name__ == '__main__':
     init()
 
     # TODO: Change this to the features that are actually used by your model.
+    # Use any sample value you like. Just make sure that the type matches the expected attribute.
     input = pd.DataFrame([{
         'sqft_above': 100.0,
-        'sqft_basement': 120.0,
-        'grade': 3,
-        'condition': 1,
-        'bedrooms': 3,
-        'waterfront': 1,
-        'floors': 2,
-        'sqft_lot': 10000
+        'sqft_basement': 120.0
     }])
 
     result = run(input)
