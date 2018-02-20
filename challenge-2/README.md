@@ -294,7 +294,8 @@ _ = sns.heatmap(corr, annot=True)
 plt.show()
 ```
 
-This plots a matrix that shows the pearson correlation coefficient. 
+The code above plots a matrix that shows 
+[the pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient). 
 The pearson correlation coefficient tells you how well the data fits a linear
 function of the first order (in short, no bends in the line). 
 
