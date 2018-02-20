@@ -20,7 +20,7 @@ df = package.run('Data analysis.dprep', dataflow_idx=0)
 
 df_train, df_validation = train_test_split(df, test_size=0.2)
 
-feature_names = ['sqft_above', 'sqft_basement', 'grade', 'condition', 'bedrooms', 'waterfront','floors', 'sqft_lot']
+feature_names = ['sqft_living','sqft_above', 'sqft_basement', 'grade','bedrooms', 'waterfront','floors', 'view']
 
 features = df_train[feature_names].values
 y = df_train[['price']].values

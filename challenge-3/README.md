@@ -3,6 +3,9 @@ In the previous challenge you established that a number of features in the
 dataset seem to correlate to the price of a home. This means we can build
 a model for it.
 
+It's good news for your real estate agency. It means they get a solution that
+can actually help set a better price for homes.
+
 In this challenge you're going to build a model based on the findings in the 
 previous challenge. Don't worry if you coulnd't quite finish the previous 
 challenge. In this challenge I will include all the necessary details so you
@@ -11,11 +14,10 @@ can still build the model.
 ## A little background
 The model for predicting a continuous value like the price of a house is called
 a regression model. Regression models are models that try to fit a line through
-a set of observations so that the line best fits the observations previously 
-seen.
+a set of observations so that the line best fits those observations.
 
-Remember, observations are rows in the table of the dataset. Features are the
-columns in the table.
+> Remember, observations are rows in the table of the dataset. Features are the
+  columns in the table.
 
 As an example, check the plot below. It shows the 
 square footage above ground compared to the price those homes were sold for.
@@ -27,8 +29,8 @@ that best fits the observations.
 Notice that the model isn't perfect, the difference between 
 the line (the prediction) and the actual observations is off by quite a bit.
 
-What does this mean? Clearly using only square footage above ground in the 
-regression model isn't enough to predict the price. We need to include 
+What does this mean? Clearly using only square footage of the living space in 
+the regression model isn't enough to predict the price. We need to include 
 more features to get a more accurate prediction of the price.
 
 That is what we're going to do in this challenge. We're going to train a linear
@@ -106,7 +108,7 @@ from the `sklearn.linear_model` package.
 The class can be used like this:
 
 ```
-feature_names = ['sqft_above', 'sqft_basement', 'grade', 'condition']
+feature_names = ['sqft_living', 'sqft_basement', 'grade', 'bathrooms']
 
 features = df_train[feature_names].values
 y = df_train[['price']]
@@ -115,8 +117,8 @@ model = LinearRegression()
 model.fit(features, y)
 ```
 
-We're going to train the model on four features: `sqft_above`, `sqft_basement`,
-`grade` and `condition`. 
+We're going to train the model on four features: `sqft_living`, `sqft_basement`,
+`grade` and `bathrooms`. 
 
 We extract these from the trainingset into an array. We do the same for price.
 
@@ -140,7 +142,7 @@ and results in the details window.
 
 ### Objective: Store the model
 Currently the job doesn't output anything. We do train the model, but we don't
-save it for use later on. That's kind of counter-productive. So let's save the
+save it to disk. That's kind of counter-productive. So let's save the
 model on disk before we move on.
 
 In python you can save objects to disk using the pickle module. 
@@ -201,7 +203,7 @@ Because it enables you to compare the changes in score over time in the
 workbench application. 
 
 ### Objective: Validate your model
-Use the code in the sample above to add validation logic to your model.
+Use the code in the sample above to add validation logic to 'train.py'.
 Be sure to use the same feature names for training and validation.
 
 Run the job again to check the score of your model. Does it look like this
