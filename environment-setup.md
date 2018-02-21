@@ -31,6 +31,9 @@ Specify the following properties:
  management account. This is a free option that will ultimately save you
  a lot of money.
 
+**IMPORTANT** Make sure you use the region `eastus2`. The Azure ML environment
+doesn't work yet in west europe, despite that the portal says it does.
+
 Now click the create button and grab something to drink. It will take a few
 minutes for the resources to be created. 
 
