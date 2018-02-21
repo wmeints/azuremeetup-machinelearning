@@ -3,7 +3,7 @@ This repository contains the challenges and data for the hands-on lab held at
 the dutch azure meetup. The goal of the workshop is to build a model to predict 
 house prices and deploy the model to Azure.
 
-This lab includes [slides](Bring your AI experiment to production.pptx) 
+This lab includes [slides](Bring%20your%20AI%20experiment%20to%20production.pptx) 
 with an introduction.
 
 ## Prerequisites
@@ -27,7 +27,7 @@ After you're done with the setup, start with
 4. [Deploy your model to Azure](challenge-4/README.md)
 
 ## Copyright and other notifications
-The data for this workshop comes from [harlfoxem]() who hosted all 
+The data for this workshop comes from [harlfoxem](https://www.kaggle.com/harlfoxem) who hosted all 
 [the house sales data](https://www.kaggle.com/harlfoxem/housesalesprediction) 
 on Kaggle.com.
 
