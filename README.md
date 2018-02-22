@@ -34,3 +34,12 @@ on Kaggle.com.
 This data isn't meant for commercial use. This means that while you can use the 
 workshop format in any way you like, I kindly remind you to get other data
 if you plan to sell this workshop format for money.
+
+## Changelog
+**2018-02-22**
+* Fixed: ECDF plot was incorrect. As it turns out, the formula was wrong.
+* Fixed: Code sample in challenge 2 to get value_count() for yr_renovated was unclear.
+* Fixed: Missing instructions for installing Seaborn were added in Challenge 2.
+
+**2018-02-21**
+Intial version
