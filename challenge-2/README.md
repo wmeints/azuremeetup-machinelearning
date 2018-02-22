@@ -161,7 +161,7 @@ First examine the feature by calling the `value_counts()` method on the series.
 You can do this with the following code:
 
 ``` python
-dataframe['col_name'].value_counts()
+df['yr_renovated'].value_counts()
 ```
 
 Also try to make a scatter plot for the feature in combination with the price
