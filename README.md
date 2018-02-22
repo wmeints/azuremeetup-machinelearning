@@ -42,4 +42,4 @@ if you plan to sell this workshop format for money.
 * Fixed: Missing instructions for installing Seaborn were added in Challenge 2.
 
 **2018-02-21**
-Intial version
+* Intial version
