@@ -255,18 +255,21 @@ You can calculate the ECDF using the function below:
 ```
 def ecdf(series):
     import numpy as np
-    
-    sq = series.value_counts()
-    return sq.sort_index().cumsum()*1./len(sq)
+    xs = np.sort(series)
+    ys = np.arange(1, len(xs)+1)/float(len(xs))
+    return xs, ys
 ```
 
 To use the function inside the notebook, use the following code:
 
 ```
-ecdf(df['sqft_above']).plot(marker='.', linestyle='none')
+ecdf_x, ecdf_y = ecdf(df['sqft_above'])
+
+plt.plot(ecdf_x, ecdf_y, marker='.', linestyle='none')
 
 plt.xlabel('Square footage above ground')
 plt.ylabel('ECDF')
+
 plt.show()
 ```
 
