@@ -40,6 +40,7 @@ if you plan to sell this workshop format for money.
 * Fixed: ECDF plot was incorrect. As it turns out, the formula was wrong.
 * Fixed: Code sample in challenge 2 to get value_count() for yr_renovated was unclear.
 * Fixed: Missing instructions for installing Seaborn were added in Challenge 2.
+* Fixed: Added instructions to fix a problem with a missing resource provider on Azure.
 
 **2018-02-21**
 * Intial version

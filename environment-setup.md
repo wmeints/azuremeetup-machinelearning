@@ -90,15 +90,47 @@ Enter the following properties:
 Save the changes and close the panel.
 
 ## Step 8: Create a production environment
-If you're planning on deploying your model to Azure in [Challenge 4](challenge-4/README.md) then you
-need to setup an Azure ML environment. Go to `File -> Open command prompt` and 
-execute the following command in your command prompt:
+If you're planning on deploying your model to Azure in 
+[Challenge 4](challenge-4/README.md) then you need to setup an Azure ML 
+environment. For this we need to configure a number of things:
+ 
+ * The Microsoft CDN resource provider
+ * An environment to deploy machine learning services
+ 
+Go to `File -> Open command prompt`. This will open a command prompt with the 
+Azure ML workbench tooling preloaded.
+
+We're first going to find out if you need to register the microsoft CDN 
+resource provider. Microsoft uses resource providers to create resources on 
+Azure. Since the components that we'll use in this workshop are in preview, 
+it could well be that the resource provider
+for the components isn't available yet.
+
+Execute the following command to check if you have the resource provider:
+
+```
+az provider show --namespace Microsoft.Cdn
+```
+
+When the provider is registered for your subscription, the above command will
+print a bunch of information about the provider.
+
+When the command doesn't output any data , please execute the following command
+to register the resource provider:
+
+```
+az provider register --namespace Microsoft.Cdn
+```
+
+Once registered you can setup your experimentation environment with the 
+following command:
 
 ```
 az ml env setup -l eastus2 -n testexperimentenv
 ```
 
-This creates a new VM with docker for Azure ML experiments in the region eastus2.
+This creates a new VM with docker for Azure ML experiments in 
+the region eastus2.
 
 **Note** I used eastus2 because this service is in preview and currently doesn't
 work in westeurope or other regions. 
