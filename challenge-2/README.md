@@ -281,6 +281,13 @@ While the ECDF plots and scatter plots provide you with an intuitive way of
 learning about the correlation there's an even more detailed method to find
 correlations in the data.
 
+Open up the command prompt from Azure ML Workbench by going to 
+`File -> Open Command Prompt`. Next execute the following command:
+
+```
+pip install seaborn
+```
+
 Try this:
 
 ``` python
