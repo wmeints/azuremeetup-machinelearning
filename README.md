@@ -36,6 +36,8 @@ workshop format in any way you like, I kindly remind you to get other data
 if you plan to sell this workshop format for money.
 
 ## Changelog
+**2018-04-09**
+* Fixed: Environment kinds are changed in the tooling. Changed setup page to reflect this.
 **2018-02-22**
 * Fixed: ECDF plot was incorrect. As it turns out, the formula was wrong.
 * Fixed: Code sample in challenge 2 to get value_count() for yr_renovated was unclear.
