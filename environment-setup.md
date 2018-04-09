@@ -126,7 +126,7 @@ Once registered you can setup your experimentation environment with the
 following command:
 
 ```
-az ml env setup -l eastus2 -n testexperimentenv
+az ml env setup -l eastus2 -c -n testexperimentenv
 ```
 
 This creates a new VM with docker for Azure ML experiments in 
